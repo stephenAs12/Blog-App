@@ -7,14 +7,12 @@ import HomePage from './pages/HomePage'
 import About from './pages/AboutPage'
 import ArticlesListPage from './pages/ArticlesListPage'
 import ArticlesPage from './pages/ArticlesPage'
-import { Children } from 'react'
 import Layout from './Layout'
 
 const routes = [{
   path: '/',
   element: <Layout />,
-  Children: [
-    {
+  children: [{
       path: '/',
       element: <HomePage />,
     },
@@ -27,7 +25,7 @@ const routes = [{
       element: <ArticlesListPage />
     },
     {
-      path: '/articles/individual',
+      path: '/articles-list/:name',
       element: <ArticlesPage />
     }]
 }]
