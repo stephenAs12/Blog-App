@@ -8,10 +8,12 @@ import About from './pages/AboutPage'
 import ArticlesListPage from './pages/ArticlesListPage'
 import ArticlesPage from './pages/ArticlesPage'
 import Layout from './Layout'
+import PageNotFound from './pages/PageNotFound'
 
 const routes = [{
   path: '/',
   element: <Layout />,
+  errorElement: <PageNotFound />,
   children: [{
       path: '/',
       element: <HomePage />,
